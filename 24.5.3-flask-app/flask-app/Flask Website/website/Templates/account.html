@@ -1,0 +1,101 @@
+{% extends "base.html" %} 
+
+{% block title %}Test{% endblock %}
+
+{% block content %}
+
+<h2 class="title">My Listings</h2>
+
+<section class="widget_sect">
+  {% for listing in user.listings%}
+  <a href="/{{ user.id }}/my-listing/{{ listing.id }}" class="widget-link">
+    <section class="widget">
+      <div class="widget-header">
+        <button type="button" class="close btn-icon" onClick="deleteListing({{ listing.id }}, {{ listing.user_id }})">
+          <i class="fa fa-times text-white"></i>
+        </button>
+      </div>
+      <div class="widget-content">
+        <img src="{{ url_for('static', filename='images/' + listing.image_path) }}" class="widgetImage" />
+        <h4 class="widget-title">{{ listing.title }}</h4>
+        <p class="widget-city">{{ listing.city|capitalize }}</p>
+        <p class="widget-price">{{ "£" ~ listing.price|int ~ " per day"}}</p>
+      </div>
+    </section>
+  </a>
+  {% endfor %}
+
+  <a href="/{{ user.id }}//new-listing">
+    <div class="widget plusImageWrapper">
+      <img src="{{ url_for('static', filename='plus.png') }}" class="plusImage" />
+    </div>
+  </a>
+</section>
+
+<section class="spacer"></section>
+
+<style>
+  .widget_sect {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .widget {
+    height: 350px;
+    width: 300px;
+    background-color: var(--navbar-color);
+    border: 2px solid var(--text-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+  }
+
+  .widget-header {
+    align-self: flex-end;
+  }
+
+  .widget-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .widgetImage {
+    margin-top: 15px;
+    height: 70%;
+    border: 3px solid var(--text-color);
+    border-radius: 20px;
+    max-height: 170px;
+  }
+
+  .widget-title,
+  .widget-city,
+  .widget-price {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 90%;
+  }
+
+  .plusImageWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+  }
+
+  .plusImage {
+    width: 50%;
+    height: 50%;
+  }
+
+</style>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %} 
+
+{% block title %}Settings{% endblock %}
+
+{% block content %}
+
+<section class="title">
+    <h2>My Details</h2>
+</section>
+
+
+<div class="form-container">
+    <form method="POST">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{{ user.email }}">
+      </div>
+
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" value="{{ user.first_name }}">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" placeholder="Address" value="{{ user.address }}">
+      </div>
+
+      <div class="form-group">
+        <label for="postcode">Postcode</label>
+        <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Postcode" value="{{ user.postcode }}">
+      </div>
+
+      <div>
+        <button type="login" class="submit-button">Change</button>
+      </div>
+    </form>
+  </div>
+
+  <section class="spacer"></section>
+  <section class="spacer"></section>
+  <section class="spacer"></section>
+ 
+
+
+
+{% endblock %}
+
+{% block main_section %}<section style="padding:70px; border: solid grey; border-width: 70px;">{% endblock %}

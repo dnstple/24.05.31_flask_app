@@ -1,0 +1,49 @@
+{% extends "base.html" %} 
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+<section class="title">
+    <h2>Sign Up</h2>
+</section>
+
+
+<div class="form-container">
+    <form method="POST">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+      </div>
+
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+      </div>
+
+      <div class="form-group">
+        <label for="password1">Enter Password</label>
+        <input type="password" class="form-control" id="password1" name="password1" placeholder="Password">
+    </div>
+
+    <div class="form-group">
+        <label for="password2">Re-enter Password</label>
+        <input type="password" class="form-control" id="password2" name="password2" placeholder="Password">
+        
+    </div>
+
+
+      <div>
+        <button type="login" class="submit-button">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <section class="spacer"></section>
+  <section class="spacer"></section>
+  <section class="spacer"></section>
+
+
+{% endblock %}
+
+{% block main_section %}<section style="padding:70px; border: solid white; border-width: 70px;">{% endblock %}

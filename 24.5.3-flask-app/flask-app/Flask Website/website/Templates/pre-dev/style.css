@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto';font-size: 22px;
+    background-color: rgb(8, 48, 1);
+    transition: background-color 0.3s ease;
+    background: linear-gradient(to right, rgb(8, 48, 1), rgb(16, 92, 3));
+    
+  }
+  
+  h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 60px;
+  }
+  
+  h2 {
+      color: white;
+  
+  }
+  
+  p {
+    line-height: 1.5;
+    color: white; 
+  }
+  
+  nav {
+        text-align: center;
+  }
+
+  
+  .my-icon {
+    width: 125px; 
+    height: 125px; 
+    position: relative;
+    top:0;
+    left:0;
+    margin: 30px;
+  }
+  
+  .header {
+    background-color: rgb(2, 34, 15);
+    border-radius: 30px
+  }
+  
+  .main_title {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 70px;
+    }
+  
+  .sign_in_button {
+      position: absolute;
+      top:0;
+      right:0;
+      margin:30px;
+      font-size: 20px;
+  
+      border: solid white;
+      border-radius: 20px;
+      border-width: 1px;
+      padding: 10px;
+      background-color: transparent;
+      color: white;
+  }
+  
+  .sign_in {
+    background-color: rgb(2, 34, 15);
+    color: white;
+    border: solid white;
+    border-width: 3px; 
+    border-radius: 15px;
+    text-align: center;
+    padding: 150px;
+    float:center;
+    margin: 20px;
+  
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    cursor: move;
+  }
+  
+  .form_icon {
+    width: 75px;
+    height:75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 50px;
+  }
+  
+  .sign_in button {
+    margin-right: 20px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding:5px;
+  }
+  
+    
+    .top_sect {
+      margin-top: 30px;
+      margin-left: 20px;
+      padding-left: 15px;
+       text-align: left;
+  }
+  
+  .widget_sect {
+    margin-top: 30px;
+  }
+  
+  .widget{
+        border: solid white;
+        border-width: 1px; 
+        border-radius: 15px;
+        text-align: center;
+        padding: 5px;
+        float:left;
+        margin: 20px;
+  }
+  
+  .clearfix {
+    clear: both; /* This clears any floats */
+    visibility: hidden;
+    height: 0;
+  }
+  
+  .heart_img {
+    width:100px;
+    height:100px;
+  }
+  
+  .widget_link {
+    text-decoration: none; /* Remove underline */
+  }
+  

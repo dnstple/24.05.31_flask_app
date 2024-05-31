@@ -1,0 +1,7 @@
+{% for message in user.messages %}
+<div class="chat-container">
+  <div class="chat">
+    <div class="chat-user">{{ message.message }}</div>
+  </div>
+</div>
+{% endfor %}
